@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdo Sharaf</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/95e4c26e1d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- --------header----------- -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <p class="logo"><span>Abdo</span> Sharaf</p>
+                <ul id="side-menu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-text">
+                <p>Software Engineer</p>
+                <h1>Hi, I'm <span>Abdo</span><br>Sharaf From Egypt</h1>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- --------about----------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am a dedicated and detail-oriented Native Android Developer with over 2 years of experience
+                        in Kotlin and crafting mobile applications, seeking opportunities to contribute and develop
+                        innovative applications with my problem-solving skills, passion, and commitment to deliver
+                        user-friendly software solutions.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
+                        <p class="tab-links" onclick="openTab('experience')">Experience</p>
+                        <p class="tab-links" onclick="openTab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Android</span><br>Develop Android applications</li>
+                            <li><span>Android</span><br>Develop Android applications</li>
+                            <li><span>Android</span><br>Develop Android applications</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2022 - Current</span><br>Android Developer</li>
+                            <li><span>2022 - Current</span><br>Android Developer</li>
+                            <li><span>2022 - Current</span><br>Android Developer</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2020 - 2024</span><br>Damietta University</li>
+                            <li><span>2020 - 2024</span><br>Damietta University</li>
+                            <li><span>2020 - 2024</span><br>Damietta University</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- --------portfolio----------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png">
+                    <div class="layer">
+                        <h3>App 1</h3>
+                        <p>This is project #1 description.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.png">
+                    <div class="layer">
+                        <h3>App 2</h3>
+                        <p>This is project #2 description.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-3.png">
+                    <div class="layer">
+                        <h3>App 3</h3>
+                        <p>This is project #3 description.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+
+
+
+    <!-- --------contact----------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-col-1">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>contact@text.com</p>
+                    <p><i class="fa-solid fa-phone"></i>01010101010</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <a href="https://drive.google.com/uc?export=download&id=17U9gOSziWnCIV91Pjh6FGA3cnAnxWpaI" class="btn btn-2">Download CV</a>
+                </div>
+                <div class="contact-col-2">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn-2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- --------copy right----------- -->
+    <div class="copyright">
+        <p>Copyright <i class="fa-solid fa-copyright"></i> Abdo Sharaf 2024.</p>
+    </div>
+
+
+
+    <!-- --------scripts----------- -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
