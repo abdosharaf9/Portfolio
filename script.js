@@ -1,6 +1,12 @@
 // Change the current tab
-var tabLinks = document.querySelectorAll(".tab-links");
-var tabContents = document.querySelectorAll(".tab-contents");
+const tabLinks = document.querySelectorAll(".tab-links");
+const tabContents = document.querySelectorAll(".tab-contents");
+
+tabLinks.forEach(tabLink => {
+    tabLink.addEventListener('click', () => {
+        openTab(tabLink.innerHTML.toLowerCase());
+    });
+});
 
 function openTab(tabName) {
     tabLinks.forEach(tabLink => {

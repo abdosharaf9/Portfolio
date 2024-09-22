@@ -42,6 +42,12 @@ body {
     flex-wrap: wrap;
 }
 
+.sub-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
 
 
 /* header */
@@ -83,6 +89,7 @@ body {
     content: '';
     width: 0;
     height: 3px;
+    border-radius: 4px;
     background: #0D89EA;
     position: absolute;
     left: 0;
@@ -155,7 +162,7 @@ body {
 
 /* about */
 #about {
-    padding: 100px 0;
+    padding: 110px 0 0;
     color: #ABABAB;
 }
 
@@ -165,8 +172,7 @@ body {
 
 .about-col-1 img {
     width: 100%;
-    min-height: 30%;
-    max-height: 95%;
+    height: auto;
     border-radius: 15px;
 }
 
@@ -174,20 +180,15 @@ body {
     flex-basis: 60%;
 }
 
-.sub-title {
-    font-size: 60px;
-    font-weight: 600;
-    color: #FFFFFF;
-}
-
 .tab-titles {
     display: flex;
-    margin: 20px 0 40px;
+    margin: 20px 0;
 }
 
 .tab-links {
     margin-right: 50px;
-    font-size: 18px;
+    font-size: 1.1em;
+    color: #FFFFFF;
     font-weight: 500;
     cursor: pointer;
     position: relative;
@@ -197,6 +198,7 @@ body {
     content: '';
     width: 0;
     height: 3px;
+    border-radius: 4px;
     background: #0D89EA;
     position: absolute;
     left: 0;
@@ -210,13 +212,12 @@ body {
 
 .tab-contents ul li {
     list-style: none;
-    margin: 20px 0;
-    font-size: 14px;
+    margin: 30px 0;
+    font-size: 0.9em;
 }
 
 .tab-contents ul li span {
     color: #0D89EA;
-    font-size: 16px;
 }
 
 .tab-contents {
