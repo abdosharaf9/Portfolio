@@ -42,7 +42,7 @@ body {
 }
 
 .sub-title {
-    font-size: 60px;
+    font-size: 4em;
     font-weight: 600;
     color: #FFFFFF;
 }
@@ -88,7 +88,7 @@ header {
 }
 
 .logo {
-    font-size: 3em;
+    font-size: 2em;
     font-weight: 800;
     text-decoration: none;
     color: #FFFFFF;
@@ -129,6 +129,7 @@ header {
 #home {
     height: 100vh;
     width: 100%;
+    /* TODO: Change the background image!! */
     background-image: url(images/background.png);
     background-size: cover;
     background-position: center;
@@ -158,7 +159,7 @@ header {
 
 .social-icons a {
     text-decoration: none;
-    font-size: 30px;
+    font-size: 2em;
     margin-right: 15px;
     color: #ABABAB;
     display: inline-block;
@@ -311,12 +312,12 @@ header {
     flex-direction: column;
     padding: 0 40px;
     text-align: center;
-    font-size: 14px;
+    font-size: 1em;
     transition: height 0.5s;
 }
 
 .layer h3 {
-    font-size: 32px;
+    font-size: 2em;
     font-weight: 600;
     margin-bottom: 30px;
 }
@@ -325,7 +326,7 @@ header {
     margin-top: 30px;
     color: #0D89EA;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1em;
     line-height: 60px;
     background: #FFFFFF;
     width: 60px;
