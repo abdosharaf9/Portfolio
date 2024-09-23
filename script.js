@@ -21,6 +21,32 @@ function openTab(tabName) {
     document.getElementById(tabName).classList.add("active-tab")
 }
 
+
+// See more projects button
+const seeMoreBtn = document.querySelector(".see-more")
+const projects = document.querySelectorAll(".work")
+
+for (let i = 4; i < projects.length; i++) {
+    projects[i].classList.add('hidden');
+}
+
+if (projects.length < 5) {
+    seeMoreBtn.classList.add("hidden")
+}
+
+seeMoreBtn.addEventListener('click', () => {
+    const hiddenCards = document.querySelectorAll(".work.hidden")
+
+    for (let i = 0; i < 4 && i < hiddenCards.length; i++) {
+        hiddenCards[i].classList.remove('hidden');
+    }
+
+    if(document.querySelectorAll(".work.hidden").length === 0) {
+        seeMoreBtn.classList.add("hidden")
+    }
+})
+
+
 // Form to sheets code
 const scriptURL = 'https://script.google.com/macros/s/AKfycbzZz3rH5vkKRRkVD8pMLx0tCRxapcnbgILoNxwNHtUiNRzbaJDaOg0fBGIWbFswwWseKA/exec'
 const form = document.forms['submit-to-google-sheet']

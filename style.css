@@ -12,7 +12,6 @@
 ::-webkit-scrollbar-thumb {
     background: #262626;
     border-radius: 8px;
-
 }
 
 
@@ -46,6 +45,28 @@ body {
     font-size: 60px;
     font-weight: 600;
     color: #FFFFFF;
+}
+
+.hidden {
+    display: none;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    background: #0D89EA;
+    font-size: 1.1em;
+    padding: 14px 50px;
+    border-radius: 14px;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+button {
+    border: none;
 }
 
 
@@ -131,14 +152,7 @@ body {
 }
 
 .cta-btn {
-    text-decoration: none;
     position: absolute;
-    color: #FFFFFF;
-    background: #0D89EA;
-    border-radius: 14px;
-    font-size: 1.1em;
-    border: 1px solid #0D89EA;
-    padding: 10px 40px;
     left: 50%;
     bottom: 10%;
     transform: translateX(-50%);
@@ -232,13 +246,13 @@ body {
 
 /* portfolio */
 #portfolio {
-    padding: 50px 0;
+    padding: 110px 0 0;
 }
 
 .work-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2em;
     margin-top: 50px;
 }
 
@@ -250,6 +264,7 @@ body {
 
 .work img {
     width: 100%;
+    aspect-ratio: 0.75;
     border-radius: 10px;
     display: block;
     transition: transform 0.5s;
@@ -301,25 +316,19 @@ body {
     height: 100%;
 }
 
-.btn {
-    display: block;
-    margin: 50px auto;
-    width: fit-content;
-    border: 1px solid #0D89EA;
-    padding: 14px 50px;
-    border-radius: 6px;
-    text-decoration: none;
-    color: #FFFFFF;
-    transition: background 0.5s;
-}
-
-.btn:hover {
+.see-more {
     background: #0D89EA;
+    cursor: pointer;
+    margin-top: 50px;
 }
 
 
 
 /* contact */
+#contact {
+    margin: 110px 0 80px;
+}
+
 .contact-col-1 {
     flex-basis: 35%;
 }
@@ -357,9 +366,9 @@ body {
     transform: translateY(-5px);
 }
 
-.btn.btn-2 {
+a.btn {
     display: inline-block;
-    background: #0D89EA;
+    margin-top: 30px;
 }
 
 .contact-col-2 form {
@@ -383,7 +392,7 @@ textarea {
     resize: none;
 }
 
-form .btn-2 {
+form button {
     padding: 14px 60px;
     font-size: 18px;
     margin-top: 20px;
