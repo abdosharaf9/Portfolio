@@ -41,7 +41,7 @@ seeMoreBtn.addEventListener('click', () => {
         hiddenCards[i].classList.remove('hidden');
     }
 
-    if(document.querySelectorAll(".work.hidden").length === 0) {
+    if (document.querySelectorAll(".work.hidden").length === 0) {
         seeMoreBtn.classList.add("hidden")
     }
 })
@@ -50,17 +50,27 @@ seeMoreBtn.addEventListener('click', () => {
 // Form to sheets code
 const scriptURL = 'https://script.google.com/macros/s/AKfycbzZz3rH5vkKRRkVD8pMLx0tCRxapcnbgILoNxwNHtUiNRzbaJDaOg0fBGIWbFswwWseKA/exec'
 const form = document.forms['submit-to-google-sheet']
-const msg = document.getElementById("msg")
+const submitBtn = document.querySelector(".submit")
 
 form.addEventListener('submit', e => {
+    submitBtn.classList.add("loading")
+    submitBtn.disabled = true
+
     e.preventDefault()
+
     fetch(scriptURL, { method: 'POST', body: new FormData(form) })
         .then(response => {
-            msg.innerHTML = "Success!"
-            setTimeout(function () {
-                msg.innerHTML = ""
-            }, 5000)
             form.reset()
+            submitBtn.disabled = false
+            submitBtn.classList.remove("loading")
+
+            alert("Your message is sent successfully!")
         })
-        .catch(error => console.error('Error!', error.message))
+        .catch(error => {
+            submitBtn.disabled = false
+            submitBtn.classList.remove("loading")
+
+            alert("An error happened, please try again.")
+            console.error('Error!', error.message)
+        })
 })

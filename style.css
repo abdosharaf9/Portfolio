@@ -63,6 +63,7 @@ body {
     border-radius: 14px;
     text-decoration: none;
     color: #FFFFFF;
+    cursor: pointer;
 }
 
 button {
@@ -72,7 +73,7 @@ button {
 
 
 /* header */
-.header {
+header {
     width: 100%;
     background: #080808;
     position: fixed;
@@ -101,7 +102,7 @@ button {
     color: #FFFFFF;
     text-decoration: none;
     margin: 0 20px;
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: 500;
     position: relative;
 }
@@ -142,13 +143,31 @@ button {
     font-size: 4em;
 }
 
-.home-text h3 {
-    font-size: 1.1em;
-    margin-top: 20px;
-}
-
 .home-text h1 span {
     color: #0D89EA;
+}
+
+.home-text p {
+    font-size: 1.1em;
+}
+
+.social-icons {
+    margin-top: 30px;
+    cursor: default;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ABABAB;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover {
+    color: #0D89EA;
+    transform: translateY(-5px);
 }
 
 .cta-btn {
@@ -164,9 +183,12 @@ button {
 }
 
 @keyframes bounce {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateX(-50%) translateY(0);
     }
+
     50% {
         transform: translateX(-50%) translateY(-10px);
     }
@@ -176,7 +198,7 @@ button {
 
 /* about */
 #about {
-    padding: 110px 0 0;
+    padding: 110px 0 0 0;
     color: #ABABAB;
 }
 
@@ -246,7 +268,11 @@ button {
 
 /* portfolio */
 #portfolio {
-    padding: 110px 0 0;
+    padding: 110px 0 0 0;
+}
+
+#portfolio .sub-title {
+    text-align: center;
 }
 
 .work-list {
@@ -317,8 +343,6 @@ button {
 }
 
 .see-more {
-    background: #0D89EA;
-    cursor: pointer;
     margin-top: 50px;
 }
 
@@ -326,93 +350,99 @@ button {
 
 /* contact */
 #contact {
-    margin: 110px 0 80px;
+    margin: 80px 0 30px;
 }
 
-.contact-col-1 {
-    flex-basis: 35%;
+#contact .sub-title {
+    text-align: center;
 }
 
-.contact-col-2 {
-    flex-basis: 60%;
-}
-
-.contact-col-1 p {
-    margin-top: 30px;
-}
-
-.contact-col-1 p i {
-    color: #0D89EA;
-    margin-right: 15px;
-    font-size: 25px;
-}
-
-.social-icons {
-    margin-top: 30px;
-    cursor: default;
-}
-
-.social-icons a {
-    text-decoration: none;
-    font-size: 30px;
-    margin-right: 15px;
-    color: #ABABAB;
-    display: inline-block;
-    transition: transform 0.5s;
-}
-
-.social-icons a:hover {
-    color: #0D89EA;
-    transform: translateY(-5px);
-}
-
-a.btn {
-    display: inline-block;
-    margin-top: 30px;
-}
-
-.contact-col-2 form {
+.contact-form {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
 }
 
-form input,
-form textarea {
+form {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+input,
+textarea {
     width: 100%;
     border: 0;
     outline: none;
+    border: 1px solid #262626;
     background: #262626;
     padding: 15px;
     margin: 15px 0;
     color: #FFFFFF;
-    font-size: 18px;
-    border-radius: 6px;
-}
-
-textarea {
+    font-size: 1em;
+    border-radius: 10px;
     resize: none;
 }
 
-form button {
-    padding: 14px 60px;
-    font-size: 18px;
-    margin-top: 20px;
-    cursor: pointer;
+input:focus,
+textarea:focus {
+    border: 1px solid #0D89EA;
 }
 
-#msg {
-    color: #61B752;
-    margin-top: -40px;
-    display: block;
+form button {
+    position: relative;
+    margin-top: 15px;
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form button:disabled {
+    background: #262626;
+    cursor: default;
+}
+
+.spinner {
+    display: none;
+    animation: spin 1s linear infinite
+}
+
+form button.loading .spinner {
+    display: inline-block;
+}
+
+form button.loading .submit-text {
+    display: none;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 
 
 /* copyright */
-.copyright {
+footer {
     width: 100%;
-    text-align: center;
     padding: 25px 0;
     background: #262626;
-    font-weight: 300;
-    margin-top: 20px;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.copyright a {
+    text-decoration: none;
+    color: #0D89EA;
 }
