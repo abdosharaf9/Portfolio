@@ -174,9 +174,9 @@ header {
 .cta-btn {
     position: absolute;
     left: 50%;
-    bottom: 10%;
+    bottom: 5%;
     transform: translateX(-50%);
-    animation: bounce 2s infinite;
+    animation: bounce 1.5s infinite;
 }
 
 .cta-btn i {
