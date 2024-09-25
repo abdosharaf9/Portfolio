@@ -75,7 +75,6 @@ button {
 /* header */
 header {
     width: 100%;
-    background: #080808;
     position: fixed;
     top: 0;
     left: 0;
@@ -85,6 +84,11 @@ header {
     justify-content: space-between;
     flex-wrap: wrap;
     z-index: 100;
+    transition: 0.3s ease;
+}
+
+header.scrolled {
+    background: #080808;
 }
 
 .logo {
@@ -92,9 +96,10 @@ header {
     font-weight: 800;
     text-decoration: none;
     color: #FFFFFF;
+    transition: 0.3s ease;
 }
 
-.logo span {
+.header.scrolled span {
     color: #0D89EA;
 }
 
@@ -123,14 +128,18 @@ header {
     width: 70%;
 }
 
+.down-btn i {
+    margin-left: 8px;
+}
+
 
 
 /* home */
 #home {
     height: 100vh;
     width: 100%;
-    /* TODO: Change the background image!! */
-    background-image: url(images/background.png);
+    background-image: url(images/background.svg);
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -140,12 +149,51 @@ header {
     position: relative;
 }
 
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    box-shadow: 0 0 6px #FFFFFF80;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(-10vh);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(100vh);
+        opacity: 0.1;
+    }
+}
+
+.home-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
 .home-text h1 {
-    font-size: 4em;
+    font-size: 3em;
 }
 
 .home-text h1 span {
     color: #0D89EA;
+    font-size: 2em;
 }
 
 .home-text p {
@@ -176,7 +224,7 @@ header {
     left: 50%;
     bottom: 5%;
     transform: translateX(-50%);
-    animation: bounce 1.5s infinite;
+    animation: bounce 4s ease-in-out infinite;
 }
 
 .cta-btn i {
@@ -191,7 +239,7 @@ header {
     }
 
     50% {
-        transform: translateX(-50%) translateY(-10px);
+        transform: translateX(-50%) translateY(-15px);
     }
 }
 

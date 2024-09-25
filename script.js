@@ -1,3 +1,37 @@
+// Change header background
+window.addEventListener('scroll', function () {
+    const header = document.querySelector(".header");
+    if (window.scrollY >= 30) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+});
+
+
+// Create animated stars
+setInterval(createStar, 100);
+
+function createStar() {
+    const star = document.createElement('div');
+    star.classList.add('star');
+
+    const size = Math.random() * 2 + 1;
+    const leftPosition = Math.random() * 100;
+    const fallDuration = Math.random() * 5 + 3;
+
+    star.style.width = `${size}px`;
+    star.style.height = `${size}px`;
+    star.style.left = `${leftPosition}vw`;
+    star.style.animationDuration = `${fallDuration}s`;
+    star.style.opacity = Math.random();
+
+    document.querySelector('.stars').appendChild(star);
+
+    setTimeout(() => { star.remove(); }, fallDuration * 1000);
+}
+
+
 // Change the current tab
 const tabLinks = document.querySelectorAll(".tab-links");
 const tabContents = document.querySelectorAll(".tab-contents");
