@@ -220,6 +220,8 @@ header.scrolled {
 }
 
 .cta-btn {
+    background: #080808;
+    border: 2px solid #0D89EA;
     position: absolute;
     left: 50%;
     bottom: 5%;
@@ -277,6 +279,10 @@ header.scrolled {
     font-weight: 500;
     cursor: pointer;
     position: relative;
+}
+
+.tab-links:not(.active-link):hover {
+    color: #0D89EA;
 }
 
 .tab-links::after {
@@ -341,6 +347,7 @@ header.scrolled {
     width: 100%;
     aspect-ratio: 0.75;
     border-radius: 10px;
+    object-fit: cover;
     display: block;
     transition: transform 0.5s;
 }
@@ -393,6 +400,18 @@ header.scrolled {
 
 .see-more {
     margin-top: 50px;
+    background: #080808;
+    border: 2px solid #0D89EA;
+    transition: 0.5s;
+}
+
+.see-more:hover {
+    background: #0D89EA;
+    transform: translateY(-10px);
+}
+
+.see-more i {
+    margin-left: 8px;
 }
 
 
