@@ -14,7 +14,13 @@
     border-radius: 8px;
 }
 
-
+/*
+375 smallest
+768 medium
+1024 large
+> 1024 XL
+> 1044 2XL
+*/
 
 /* globals */
 * {
@@ -42,7 +48,7 @@ body {
 }
 
 .sub-title {
-    font-size: 4em;
+    font-size: 4rem;
     font-weight: 600;
     color: #FFFFFF;
 }
@@ -58,7 +64,7 @@ body {
 
 .btn {
     background: #0D89EA;
-    font-size: 1.1em;
+    font-size: 1.1rem;
     padding: 14px 50px;
     border-radius: 14px;
     text-decoration: none;
@@ -92,7 +98,7 @@ header.scrolled {
 }
 
 .logo {
-    font-size: 2em;
+    font-size: 2rem;
     font-weight: 800;
     text-decoration: none;
     color: #FFFFFF;
@@ -107,7 +113,7 @@ header.scrolled {
     color: #FFFFFF;
     text-decoration: none;
     margin: 0 20px;
-    font-size: 1.1em;
+    font-size: 1.1rem;
     font-weight: 500;
     position: relative;
 }
@@ -188,16 +194,16 @@ header.scrolled {
 }
 
 .home-text h1 {
-    font-size: 3em;
+    font-size: 3rem;
 }
 
 .home-text h1 span {
     color: #0D89EA;
-    font-size: 2em;
+    font-size: 6rem;
 }
 
 .home-text p {
-    font-size: 1.1em;
+    font-size: 1.1rem;
 }
 
 .social-icons {
@@ -207,7 +213,7 @@ header.scrolled {
 
 .social-icons a {
     text-decoration: none;
-    font-size: 2em;
+    font-size: 2rem;
     margin-right: 15px;
     color: #ABABAB;
     display: inline-block;
@@ -274,7 +280,7 @@ header.scrolled {
 
 .tab-links {
     margin-right: 50px;
-    font-size: 1.1em;
+    font-size: 1.1rem;
     color: #FFFFFF;
     font-weight: 500;
     cursor: pointer;
@@ -304,7 +310,7 @@ header.scrolled {
 .tab-contents ul li {
     list-style: none;
     margin: 30px 0;
-    font-size: 0.9em;
+    font-size: 0.9rem;
 }
 
 .tab-contents ul li span {
@@ -333,7 +339,7 @@ header.scrolled {
 .work-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2em;
+    gap: 2rem;
     margin-top: 50px;
 }
 
@@ -367,12 +373,12 @@ header.scrolled {
     flex-direction: column;
     padding: 0 40px;
     text-align: center;
-    font-size: 1em;
+    font-size: 1rem;
     transition: height 0.5s;
 }
 
 .layer h3 {
-    font-size: 2em;
+    font-size: 2rem;
     font-weight: 600;
     margin-bottom: 30px;
 }
@@ -381,7 +387,7 @@ header.scrolled {
     margin-top: 30px;
     color: #0D89EA;
     text-decoration: none;
-    font-size: 1em;
+    font-size: 1rem;
     line-height: 60px;
     background: #FFFFFF;
     width: 60px;
@@ -449,7 +455,7 @@ textarea {
     padding: 15px;
     margin: 15px 0;
     color: #FFFFFF;
-    font-size: 1em;
+    font-size: 1rem;
     border-radius: 10px;
     resize: none;
 }
@@ -507,7 +513,7 @@ footer {
 
 .copyright {
     text-align: center;
-    font-size: 0.9em;
+    font-size: 0.9rem;
 }
 
 .copyright a {
