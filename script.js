@@ -58,26 +58,58 @@ function openTab(tabName) {
 
 // See more projects button
 const seeMoreBtn = document.querySelector(".see-more")
-const projects = document.querySelectorAll(".work")
 
-for (let i = 4; i < projects.length; i++) {
-    projects[i].classList.add('hidden');
+let itemsToShow = 4;
+const breakpoints = {
+    mobile: 470,
+    tablet: 768,
+    medium: 1200,
+};
+
+changeProjectsCount()
+window.addEventListener('resize', changeProjectsCount)
+
+function changeProjectsCount() {
+    if (window.innerWidth <= breakpoints.mobile) {
+        itemsToShow = 1;
+    } else if (window.innerWidth <= breakpoints.tablet) {
+        itemsToShow = 2;
+    } else if (window.innerWidth <= breakpoints.medium) {
+        itemsToShow = 3;
+    } else {
+        itemsToShow = 4;
+    }
+
+    updateProjectVisibility();
 }
 
-if (projects.length < 5) {
-    seeMoreBtn.classList.add("hidden")
+function updateProjectVisibility() {
+    const projects = document.querySelectorAll(".work")
+
+    projects.forEach((project, index) => {
+        if (index < itemsToShow) {
+            project.classList.remove('hidden');
+        } else {
+            project.classList.add('hidden');
+        }
+    });
+
+    updateSeeMoreButtonVisibility();
+}
+
+function updateSeeMoreButtonVisibility() {
+    const hiddenCards = document.querySelectorAll(".work.hidden");
+    seeMoreBtn.classList.toggle("hidden", hiddenCards.length === 0);
 }
 
 seeMoreBtn.addEventListener('click', () => {
     const hiddenCards = document.querySelectorAll(".work.hidden")
 
-    for (let i = 0; i < 4 && i < hiddenCards.length; i++) {
+    for (let i = 0; i < itemsToShow && i < hiddenCards.length; i++) {
         hiddenCards[i].classList.remove('hidden');
     }
 
-    if (document.querySelectorAll(".work.hidden").length === 0) {
-        seeMoreBtn.classList.add("hidden")
-    }
+    updateSeeMoreButtonVisibility();
 })
 
 
