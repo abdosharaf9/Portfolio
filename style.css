@@ -526,6 +526,27 @@ footer {
 }
 
 @media (max-width:768px) {
+    .container {
+        padding: 10px 5%;
+    }
+
+    .btn {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+
+    .home-text h1 {
+        font-size: 2rem;
+    }
+    
+    .home-text h1 span {
+        font-size: 3.5rem;
+    }
+    
+    .home-text p {
+        font-size: 1rem;
+    }
+
     .work-list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -535,6 +556,27 @@ footer {
 }
 
 @media (max-width:470px) {
+    .container {
+        padding: 10px 3%;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+
+    .home-text h1 {
+        font-size: 1.1rem;
+    }
+    
+    .home-text h1 span {
+        font-size: 2.5rem;
+    }
+    
+    .home-text p {
+        font-size: 0.8rem;
+    }
+
     .work-list {
         display: grid;
         grid-template-columns: 1fr;
