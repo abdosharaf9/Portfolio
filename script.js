@@ -9,6 +9,26 @@ window.addEventListener('scroll', function () {
 });
 
 
+// Side menu
+function openMenu() {
+    document.getElementById('side-menu').classList.add('open');
+    document.getElementById('overlay').classList.add('show');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeMenu() {
+    document.getElementById('side-menu').classList.remove('open');
+    document.getElementById('overlay').classList.remove('show');
+    document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+        closeMenu();
+    }
+});
+
+
 // Create animated stars
 setInterval(createStar, 100);
 
@@ -67,7 +87,10 @@ const breakpoints = {
 };
 
 changeProjectsCount()
-window.addEventListener('resize', changeProjectsCount)
+window.addEventListener('resize', () => {
+    changeProjectsCount()
+    closeMenu()
+})
 
 function changeProjectsCount() {
     if (window.innerWidth <= breakpoints.mobile) {

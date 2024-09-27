@@ -15,7 +15,6 @@
     <header class="header">
         <a href="" class="logo"><span>Abdo</span> Sharaf</a>
 
-        <!-- TODO: Show navigation as a side menu!! -->
         <nav class="nav-bar">
             <a href="#home">Home</a>
             <a href="#about">About Me</a>
@@ -28,7 +27,29 @@
             </a>
         </nav>
 
+        <div class="menu-icon" id="menu-icon" onclick="openMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
     </header>
+
+    <!-- --------side menu for small screens----------- -->
+    <nav class="side-menu" id="side-menu">
+        <div class="close-btn" id="close-btn" onclick="closeMenu()">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+
+        <a href="#home" onclick="closeMenu()">Home</a>
+        <a href="#about" onclick="closeMenu()">About Me</a>
+        <a href="#portfolio" onclick="closeMenu()">Portfolio</a>
+        <a href="#contact" onclick="closeMenu()">Contact Me</a>
+        <a class="down-btn" title="Download my resume" onclick="closeMenu()"
+            href="https://drive.google.com/uc?export=download&id=17U9gOSziWnCIV91Pjh6FGA3cnAnxWpaI">
+            Resume
+            <i class="fa-solid fa-download"></i>
+        </a>
+    </nav>
+
+    <div id="overlay" class="overlay" onclick="closeMenu()"></div>
 
 
 
