@@ -105,11 +105,11 @@ updateSeeMoreButtonVisibility();
 seeMoreBtn.addEventListener('click', () => {
     const hiddenCards = document.querySelectorAll(".work.hidden");
     const newAddedNumber = itemsToShow - (visibleCount % itemsToShow);
-    
+
     for (let i = 0; i < newAddedNumber && i < hiddenCards.length; i++) {
         hiddenCards[i].classList.remove('hidden');
     }
-    
+
     visibleCount += newAddedNumber;
     updateSeeMoreButtonVisibility();
 })
@@ -150,3 +150,21 @@ form.addEventListener('submit', e => {
             console.error('Error!', error.message)
         })
 })
+
+
+// Animating all sections
+let observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.2
+});
+
+
+document.querySelectorAll(".section").forEach(section => {
+    observer.observe(section);
+});
